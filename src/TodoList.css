@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap')
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #1e90ff;
+    padding-top: 15vh;
+    font-family: 'Muli', sans-serif;
+}
+
+#root {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 36em;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #ffffff;
+    font-family: 'Pacifico';
+    font-weight: 400;
+    font-size: 2.5em;
+}
+
+ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5em;
+}
+
+li {
+    color: #ffffff;
+    text-transform: capitalize;
+    font-size: 1.12em;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+li + li {
+    margin-top: 1.5em;
+}
+
+label {
+    display: inline-block;
+    font-size: 1.2em;
+    padding-left: 1.6em;
+    cursor: pointer;
+}
+
+ul li input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    transition: background-color .2s ease 0s;
+}
+
+ul li label:hover input ~ .checkmark {
+    background-color: #c9f4ff;
+    cursor: pointer;
+}
+
+ul li input:checked ~ .checkmark {
+    background-color: #ffffff;
+}
+
+ul li .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+ul li input:checked ~ .checkmark:after {
+    display: block;
+}
+
+ul li .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+}
+
+.input-container input {
+    width: 55%;
+    border: 0;
+    padding: 1em;
+    border-radius: .5em;
+    font-family: 'Muli', sans-serif;
+}
+
+button {
+    background-color: #ffffff;
+    outline: none;
+    border: 0;
+    padding: 1em;
+    margin-left: .5em;
+    border-radius: .5em;
+    cursor: pointer;
+    transition: background-color .5s ease 0s;
+}
+
+button:hover {
+    background-color: #fffdc9;
+}
+
+button:last-child:hover {
+    background-color: #91ffa5;
+}
+
+.filter {
+    color: #ffffff;
+    width: 100%;
+    font-size: 1.5em;
+    margin-top: .5em;
+}
+
